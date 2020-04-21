@@ -10,7 +10,7 @@
     <a-scene>
         <a-entity camera></a-entity>
         <a-marker preset="hiro">
-            <script>console.log("Marker Recognised")</script>
+            <script>anchorRef.addEventListener("markerFound", (e) => { console.log("Marker Found") })</script>
         </a-marker>
     </a-scene>
 
