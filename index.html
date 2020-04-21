@@ -9,8 +9,8 @@
 <body>
     <a-scene>
         <a-entity camera></a-entity>
-        <a-marker preset="hiro">
-            <script>anchorRef.addEventListener("markerFound", (e) => { console.log("Marker Found") })</script>
+        <a-marker preset="hiro" id="ARMarker">
+            <script>ARMarker.addEventListener("markerFound", (e) => { console.log("Marker Found") })</script>
         </a-marker>
     </a-scene>
 
