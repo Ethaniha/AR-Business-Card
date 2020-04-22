@@ -7,6 +7,7 @@
 <!-- Importing Frameworks -->
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+<script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
 <script src="events.js"></script>
 
 <body>
@@ -28,7 +29,7 @@
         <a-entity camera></a-entity>
 
         <!-- AR Entities for Barcode 07 -->
-        <a-marker type="barcode" value="7">
+        <a-marker markerhandler emitevents="true" cursor="rayOrigin: mouse" type="barcode" value="7">
             <!-- Debug Marker Detection Logging -->
             <script>ARMarker.addEventListener("markerFound", (e) => { console.log("Marker Found") })</script>
 
