@@ -12,6 +12,7 @@ AFRAME.registerComponent('markerhandler', {
         );
         bEntity.addEventListener('click', function () {
             var v = document.querySelector('#video');
+            console.log("Video Clicked")
             v.play();
         });
     }
