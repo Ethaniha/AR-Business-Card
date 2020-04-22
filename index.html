@@ -8,15 +8,14 @@
 
 <body>
     <a-scene>
+        <a-assets>
+            <a-asset-item id="model" src="Assets/Mercedes Model/scene.gltf"></a-asset-item>
+        </a-assets>
         <a-entity camera></a-entity>
         <a-marker preset="hiro" id="ARMarker">
             <script>ARMarker.addEventListener("markerFound", (e) => { console.log("Marker Found") })</script>
-            <a-box position='-0.5 0.5 0' material='color: blue;' scale="0.5 0.5 0.5">
-                <a-text value="Blue Cube" color="blue" align="center" scale="1 1 1" position="0 1 0"></a-text>
-            </a-box>
-            <a-box position='0.5 0.5 0' material='color: red;' scale="0.5 0.5 0.5">
-                <a-text value="Red Cube" color="red" align="center" scale="1 1 1" position="0 1 0"></a-text>
-            </a-box>
+            <a-entity gltf-model="#model" position="0 0.5 0" scale="0.2 0.2 0.2" rotation="0 90 0">
+            </a-entity>
         </a-marker>
     </a-scene>
 
