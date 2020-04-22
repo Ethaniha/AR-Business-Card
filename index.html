@@ -7,6 +7,7 @@
 <!-- Importing Frameworks -->
 <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
 <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+<script src="events.js"></script>
 
 <body>
     <a-scene arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
@@ -28,13 +29,20 @@
 
         <!-- AR Entities for Barcode 07 -->
         <a-marker type="barcode" value="7">
+            <!-- Debug Marker Detection Logging -->
             <script>ARMarker.addEventListener("markerFound", (e) => { console.log("Marker Found") })</script>
+
+            <!-- 3D Object Model -->
             <a-entity gltf-model="#model" position="-1.75 0.5 -0.75" scale="0.18 0.18 0.18" rotation="0 90 0">
             </a-entity>
+
+            <!-- Profile Image & Name/Title -->
             <a-image src="#image-face" position="3 0.5 -0.75" rotation="270 0 0" height='3' width='3'>
                 <a-text value="Filippo\nPerini" scale="4 4 1" position="1.75 0.5 0"></a-text>
                 <a-text value="Head of Design" scale="2 2 1" position="1.75 -0.75 0"></a-text>
             </a-image>
+
+            <!-- Map & Description -->
             <a-image src="#image-map" position="-1.75 0.5 3.75" rotation="270 0 0" height="3.906" width="6.03">
                 <a-image src="#desc-bg" position="6.5 0 0" height="3.906" width="6.03">
                     <a-text
@@ -42,6 +50,8 @@
                         scale="1.1 2 1" anchor="center" position="0 0 0.25"></a-text>
                 </a-image>
             </a-image>
+
+            <!-- Social Links -->
             <a-entity position="-6 0.5 -0.75" rotation="270 0 0">
                 <a-image src="#icon-linkedin" id="button-linkedin" height='1.5' width='1.5'></a-image>
                 <a-image src="#icon-facebook" id="button-facebook" position="0 -2 0" height='1.5' width='1.5'>
