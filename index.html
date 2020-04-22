@@ -7,7 +7,7 @@
 <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
 
 <body>
-    <a-scene>
+    <a-scene arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
         <a-assets>
             <a-asset-item id="model" src="Assets/models/scene.gltf"></a-asset-item>
         </a-assets>
