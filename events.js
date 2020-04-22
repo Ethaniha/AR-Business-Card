@@ -10,7 +10,7 @@ AFRAME.registerComponent('markerhandler', {
             window.open("https://www.linkedin.com/in/filippo-perini-525553aa/");
         }
         );
-        bEntity.addEventListener('click', function () {
+        bEntity.addEventListener('click', function (ev, target) {
             var v = document.querySelector('#video');
             console.log("Video Clicked")
             v.play();
