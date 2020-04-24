@@ -11,7 +11,8 @@
 <script src="events.js"></script>
 
 <body>
-    <a-scene arjs="sourceType: webcam; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
+    <a-scene embedded vr-mode-ui="enabled: false"
+        arjs="sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3;">
 
         <!-- Importing Assets -->
         <a-assets>
